@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iIa+KNYR17kn+e6fRVznYE06Uyn1iXiykYi/cW7umHzwewfWp+5fDHJjxeXk52P/70Gl2wZ5iUttbOOQJW6aVg==",
+  "dgSpecHash": "qHRzSOZtk5+tYRMk8f0Za0HnvSwkK9n9rxsSKo/ig9Y/pwWKWJDiGDuMOLdnouYkrstFjH14hkLk0rQBt06z8g==",
   "success": true,
-  "projectFilePath": "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj",
+  "projectFilePath": "D:\\GitProjects\\TopNewsApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",

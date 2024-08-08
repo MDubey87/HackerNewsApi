@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = top.news.stories.repositories
-build_property.ProjectDir = D:\GitProjects\TopNewsStoriesApi\top.news.stories.repositories\
+build_property.ProjectDir = D:\GitProjects\TopNewsApi\top.news.stories.repositories\

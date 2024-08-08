@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YuaOE+6td2hdLflaClm16a75kPKGsx5kMspgdX/JH/8PF+JGMrkExhmaG4eSecg3cqPTykrUZlmHlEH35ILwRw==",
+  "dgSpecHash": "25r+lUZvunRqK4Ld7yAN15VnthDvWaWcyamDGd7h/i9NtIAn3pbV5RzygXwpduTselYMyA5eQeup9syeWVd0/w==",
   "success": true,
-  "projectFilePath": "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.api\\top.news.stories.api.csproj",
+  "projectFilePath": "D:\\GitProjects\\TopNewsApi\\top.news.stories.api\\top.news.stories.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

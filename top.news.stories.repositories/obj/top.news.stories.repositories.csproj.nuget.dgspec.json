@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj": {}
+    "D:\\GitProjects\\TopNewsApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj": {}
   },
   "projects": {
-    "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj": {
+    "D:\\GitProjects\\TopNewsApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj",
+        "projectUniqueName": "D:\\GitProjects\\TopNewsApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj",
         "projectName": "top.news.stories.repositories",
-        "projectPath": "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj",
+        "projectPath": "D:\\GitProjects\\TopNewsApi\\top.news.stories.repositories\\top.news.stories.repositories.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\GitProjects\\TopNewsStoriesApi\\top.news.stories.repositories\\obj\\",
+        "outputPath": "D:\\GitProjects\\TopNewsApi\\top.news.stories.repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

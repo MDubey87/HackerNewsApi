@@ -10,3 +10,15 @@ D:\GitProjects\TopNewsStoriesApi\top.news.stories.repositories\obj\Debug\net6.0\
 D:\GitProjects\TopNewsStoriesApi\top.news.stories.repositories\obj\Debug\net6.0\refint\top.news.stories.repositories.dll
 D:\GitProjects\TopNewsStoriesApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.pdb
 D:\GitProjects\TopNewsStoriesApi\top.news.stories.repositories\obj\Debug\net6.0\ref\top.news.stories.repositories.dll
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\bin\Debug\net6.0\top.news.stories.repositories.deps.json
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\bin\Debug\net6.0\top.news.stories.repositories.dll
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\bin\Debug\net6.0\top.news.stories.repositories.pdb
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.csproj.AssemblyReference.cache
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.AssemblyInfoInputs.cache
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.AssemblyInfo.cs
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.csproj.CoreCompileInputs.cache
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.dll
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\refint\top.news.stories.repositories.dll
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\top.news.stories.repositories.pdb
+D:\GitProjects\TopNewsApi\top.news.stories.repositories\obj\Debug\net6.0\ref\top.news.stories.repositories.dll
