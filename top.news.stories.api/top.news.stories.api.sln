@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33711.374
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "top.news.stories.api", "top.news.stories.api.csproj", "{5A53A32C-8463-4ED6-A4BE-CD7DE53D9189}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "top.news.stories.repositories", "..\top.news.stories.repositories\top.news.stories.repositories.csproj", "{A0300713-98ED-4D3E-8332-568FB8549513}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A53A32C-8463-4ED6-A4BE-CD7DE53D9189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A53A32C-8463-4ED6-A4BE-CD7DE53D9189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A53A32C-8463-4ED6-A4BE-CD7DE53D9189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A53A32C-8463-4ED6-A4BE-CD7DE53D9189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0300713-98ED-4D3E-8332-568FB8549513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0300713-98ED-4D3E-8332-568FB8549513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0300713-98ED-4D3E-8332-568FB8549513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0300713-98ED-4D3E-8332-568FB8549513}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72FC169D-04AB-4C6B-95E1-E3C2D6B9FD46}
+	EndGlobalSection
+EndGlobal

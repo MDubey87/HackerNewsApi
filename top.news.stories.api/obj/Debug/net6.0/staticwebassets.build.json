@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FQUmGfe9M2zn9FCOATkbaRTpS9cmDrI/9VQTRFjUivk=",
+  "Source": "top.news.stories.api",
+  "BasePath": "_content/top.news.stories.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
