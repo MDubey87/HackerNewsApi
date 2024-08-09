@@ -1,10 +1,10 @@
-top.news.stories.api/.vs/*
-top.news.stories.api/bin/*
-top.news.stories.api/obj/*
-top.news.stories.api.test/.vs/*
-top.news.stories.api.test/bin/*
-top.news.stories.api.test/obj/*
-top.news.stories.repositories/.vs/*
-top.news.stories.repositories/bin/*
-top.news.stories.repositories/obj/*
+hacker.news.api/.vs/*
+hacker.news.api/bin/*
+hacker.news.api/obj/*
+hacker.news.api.test/.vs/*
+hacker.news.api.test/bin/*
+hacker.news.api.test/obj/*
+hacker.news.api.repositories/.vs/*
+hacker.news.api.repositories/bin/*
+hacker.news.api.repositories/obj/*
 
