@@ -4,22 +4,22 @@
         <name>hacker.news.api</name>
     </assembly>
     <members>
-        <member name="T:hacker.news.api.Controllers.NewsController">
+        <member name="T:hacker.news.api.Controllers.StoryController">
             <summary>
             News Controller 
             </summary>
         </member>
-        <member name="M:hacker.news.api.Controllers.NewsController.#ctor(hacker.news.api.Services.NewsService.INewsService)">
+        <member name="M:hacker.news.api.Controllers.StoryController.#ctor(hacker.news.api.Services.NewsService.IStoryService)">
             <summary>
             COntroller Constructor
             </summary>
             <param name="newsService"></param>
         </member>
-        <member name="M:hacker.news.api.Controllers.NewsController.GetTopNews">
+        <member name="M:hacker.news.api.Controllers.StoryController.GetTopNews">
             <summary>
             Get the list of top news
             </summary>
-            <returns>Returns list of top news</returns>
+            <returns>Returns list of top new stories</returns>
         </member>
         <member name="T:hacker.news.api.Middlewares.GlobalExceptionHandlingMiddelware">
             <summary>
@@ -55,49 +55,59 @@
             <param name="statusCode">Http Status Code</param>
             <returns>Return error message</returns>
         </member>
-        <member name="T:hacker.news.api.Models.Responses.News">
+        <member name="T:hacker.news.api.Models.Responses.StoriesResponse">
+            <summary>
+            Response Object
+            </summary>
+        </member>
+        <member name="P:hacker.news.api.Models.Responses.StoriesResponse.Stories">
+            <summary>
+            Colletion of Stories
+            </summary>
+        </member>
+        <member name="T:hacker.news.api.Models.Responses.Story">
             <summary>
             News Response Class
             </summary>
         </member>
-        <member name="P:hacker.news.api.Models.Responses.News.Id">
+        <member name="P:hacker.news.api.Models.Responses.Story.Id">
             <summary>
             News Id
             </summary>
         </member>
-        <member name="P:hacker.news.api.Models.Responses.News.Title">
+        <member name="P:hacker.news.api.Models.Responses.Story.Title">
             <summary>
             Title of News
             </summary>
         </member>
-        <member name="P:hacker.news.api.Models.Responses.News.Url">
+        <member name="P:hacker.news.api.Models.Responses.Story.Url">
             <summary>
             News Page Url
             </summary>
         </member>
-        <member name="T:hacker.news.api.Services.NewsService.INewsService">
+        <member name="T:hacker.news.api.Services.NewsService.IStoryService">
             <summary>
             HackerNews Service Interface
             </summary>
         </member>
-        <member name="M:hacker.news.api.Services.NewsService.INewsService.GetTopNews">
+        <member name="M:hacker.news.api.Services.NewsService.IStoryService.GetTopNewStories">
             <summary>
             Retrieves List of Top News
             </summary>
             <returns>Return collection of top news</returns>
         </member>
-        <member name="T:hacker.news.api.Services.NewsService.NewsService">
+        <member name="T:hacker.news.api.Services.NewsService.StoryService">
             <summary>
             Servcie class to implement INewsServcie
             </summary>
         </member>
-        <member name="M:hacker.news.api.Services.NewsService.NewsService.#ctor(hacker.news.api.repositories.HackerNewsRepository.IHackerNewsRepository)">
+        <member name="M:hacker.news.api.Services.NewsService.StoryService.#ctor(hacker.news.api.repositories.HackerNewsRepository.IHackerNewsRepository)">
             <summary>
             NewsService Constructor
             </summary>
             <param name="hackerNewsRepository"></param>
         </member>
-        <member name="M:hacker.news.api.Services.NewsService.NewsService.GetTopNews">
+        <member name="M:hacker.news.api.Services.NewsService.StoryService.GetTopNewStories">
             <inheritdoc/>
         </member>
     </members>

@@ -9,15 +9,15 @@ namespace hacker.news.api.Controllers
     /// </summary>
     [ApiController]
     [Route("api")]
-    public class NewsController : ControllerBase
+    public class StoryController : ControllerBase
     {
-        private readonly INewsService _newsService;
+        private readonly IStoryService _newsService;
 
         /// <summary>
         /// COntroller Constructor
         /// </summary>
         /// <param name="newsService"></param>
-        public NewsController(INewsService newsService)
+        public StoryController(IStoryService newsService)
         {
             _newsService = newsService;
         }
@@ -26,19 +26,19 @@ namespace hacker.news.api.Controllers
         /// <summary>
         /// Get the list of top news
         /// </summary>
-        /// <returns>Returns list of top news</returns>
+        /// <returns>Returns list of top new stories</returns>
         [HttpGet]
-        [Route("top-news-list")]
+        [Route("top-new-stories")]
         [ResponseCache(Duration = 600)]
-        [ProducesResponseType(typeof(IEnumerable<News>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(StoriesResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> GetTopNews()
         {
-            var result = await _newsService.GetTopNews();
-            if(!result.Any())
+            var result = await _newsService.GetTopNewStories();
+            if(!result.Stories.Any())
             {
                 return NotFound();
             }

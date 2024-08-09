@@ -10,9 +10,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.WithOrigins("*")
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+    });
+});
 builder.Services.AddResponseCaching();
 builder.Services.AddScoped<IHackerNewsRepository, HackerNewsRepository>();
-builder.Services.AddScoped<INewsService, NewsService>();
+builder.Services.AddScoped<IStoryService, StoryService>();
 var app = builder.Build();
 
 app.UseMiddleware<GlobalExceptionHandlingMiddelware>();
@@ -22,9 +31,9 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-
+app.UseCors("CorsPolicy");
 app.UseAuthorization();
-
+app.UseResponseCaching();
 app.MapControllers();
 
 app.Run();

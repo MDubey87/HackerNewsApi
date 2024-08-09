@@ -6,14 +6,14 @@ using Xunit;
 
 namespace hacker.news.api.test.Services
 {
-    public class NewsServiceTest
+    public class StoryServiceTest
     {
-        private readonly INewsService _newsService;
+        private readonly IStoryService _newsService;
         private readonly Mock<IHackerNewsRepository> _hackerNewsRepository;
-        public NewsServiceTest()
+        public StoryServiceTest()
         {
             _hackerNewsRepository = new Mock<IHackerNewsRepository>();
-            _newsService = new NewsService(_hackerNewsRepository.Object);
+            _newsService = new StoryService(_hackerNewsRepository.Object);
         }
         [Fact]
         public async Task GetTopNewsShouldRetrunListofNewsWhenSuccess()
@@ -27,9 +27,9 @@ namespace hacker.news.api.test.Services
                 Url = "http://test.com"
             };
             _hackerNewsRepository.Setup(x => x.GetHackerNewsById(It.IsAny<int>())).Returns(Task.FromResult(mockResponse));
-            var response= await _newsService.GetTopNews();
+            var response= await _newsService.GetTopNewStories();
             Assert.NotNull(response);
-            Assert.True(response.Any());
+            Assert.True(response.Stories.Any());
         }
 
         [Fact]
@@ -37,9 +37,9 @@ namespace hacker.news.api.test.Services
         {
             _hackerNewsRepository.Setup(x => x.GetTopHackerNewsIds()).Returns(Task.FromResult(Enumerable.Empty<int>()));
             
-            var response = await _newsService.GetTopNews();
+            var response = await _newsService.GetTopNewStories();
             Assert.NotNull(response);
-            Assert.True(!response.Any());
+            Assert.True(!response.Stories.Any());
         }
     }
 }

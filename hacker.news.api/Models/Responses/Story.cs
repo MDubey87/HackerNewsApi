@@ -3,7 +3,7 @@
     /// <summary>
     /// News Response Class
     /// </summary>
-    public class News
+    public class Story
     {
         /// <summary>
         /// News Id

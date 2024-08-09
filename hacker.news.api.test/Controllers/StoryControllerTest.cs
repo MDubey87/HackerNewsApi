@@ -10,20 +10,20 @@ namespace hacker.news.api.test.Controllers
     /// <summary>
     /// Test class for NewsController
     /// </summary>
-    public class NewsControllerTest
+    public class StoryControllerTest
     {
-        private readonly Mock<INewsService> _newsServcie;
-        private readonly NewsController _controller;
-        public NewsControllerTest()
+        private readonly Mock<IStoryService> _newsServcie;
+        private readonly StoryController _controller;
+        public StoryControllerTest()
         {
-            _newsServcie = new Mock<INewsService>();
-            _controller=  new NewsController(_newsServcie.Object);
+            _newsServcie = new Mock<IStoryService>();
+            _controller=  new StoryController(_newsServcie.Object);
         }
 
         [Fact]
         public async Task GetTopNewsShouldRetunListOfNewsWhenSuccess()
         {
-            _newsServcie.Setup(x => x.GetTopNews()).Returns(Task.FromResult(MockResponse()));
+            _newsServcie.Setup(x => x.GetTopNewStories()).Returns(Task.FromResult(MockResponse()));
             var response = await _controller.GetTopNews() as ObjectResult;
             Assert.NotNull(response);
             Assert.Equal(200, response.StatusCode);
@@ -32,22 +32,25 @@ namespace hacker.news.api.test.Controllers
         [Fact]
         public async Task GetTopNewsShouldThrowExceptionWhenFailed()
         {
-            _newsServcie.Setup(x => x.GetTopNews()).ThrowsAsync(new Exception());
+            _newsServcie.Setup(x => x.GetTopNewStories()).ThrowsAsync(new Exception());
             await Assert.ThrowsAsync<Exception>(() => _controller.GetTopNews());
             
         }
         [Fact]
         public async Task GetTopNewsShouldReturnNotFoundWhenEmptyResonse()
         {
-            _newsServcie.Setup(x => x.GetTopNews()).Returns(Task.FromResult(Enumerable.Empty<News>()));
+            _newsServcie.Setup(x => x.GetTopNewStories()).Returns(Task.FromResult(new StoriesResponse { Stories = Enumerable.Empty<Story>() }));
             var response = await _controller.GetTopNews() as NotFoundResult;
             Assert.NotNull(response);
             Assert.Equal(404, response.StatusCode);
 
         }
-        private static IEnumerable<News> MockResponse()
+        private static StoriesResponse MockResponse()
         {
-            return new List<News> { new News { Id = 1234, Title = "Test News Title", Url = "https://mockurl.com" } };
+            return new StoriesResponse
+            {
+                Stories = new List<Story> { new Story { Id = 1234, Title = "Test News Title", Url = "https://mockurl.com" } }
+            };
         }
     }
 }

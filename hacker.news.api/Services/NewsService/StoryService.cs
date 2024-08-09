@@ -7,34 +7,35 @@ namespace hacker.news.api.Services.NewsService
     /// <summary>
     /// Servcie class to implement INewsServcie
     /// </summary>
-    public class NewsService : INewsService
+    public class StoryService : IStoryService
     {
         private readonly IHackerNewsRepository _hackerNewsRespository;
         /// <summary>
         /// NewsService Constructor
         /// </summary>
         /// <param name="hackerNewsRepository"></param>
-        public NewsService(IHackerNewsRepository hackerNewsRepository)
+        public StoryService(IHackerNewsRepository hackerNewsRepository)
         {
             _hackerNewsRespository = hackerNewsRepository;
         }
 
         /// <inheritdoc/>
-        public async Task<IEnumerable<News>> GetTopNews()
+        public async Task<StoriesResponse> GetTopNewStories()
         {
             var newsIds = await _hackerNewsRespository.GetTopHackerNewsIds();
             if (newsIds == null || !newsIds.Any())
             {
-                return Enumerable.Empty<News>();
+                return new StoriesResponse { Stories = Enumerable.Empty<Story>() };
             }
             var newsTaskList = new List<Task<HackerNewsResponse>>();
             newsTaskList.AddRange(newsIds.AsEnumerable().Select(newsId => _hackerNewsRespository.GetHackerNewsById(newsId)));
             var newsResponseList = await Task.WhenAll(newsTaskList);            
             return MapTopNewsResponse(newsResponseList);
         }
-        private IEnumerable<News> MapTopNewsResponse(HackerNewsResponse[] response)
+        private StoriesResponse MapTopNewsResponse(HackerNewsResponse[] response)
         {
-            return response.Select(r => new News { Id = r.Id, Title = r.Title, Url = r.Url }).AsEnumerable();
+            var stories= response.Select(r => new Story { Id = r.Id, Title = r.Title, Url = r.Url }).AsEnumerable();
+            return new StoriesResponse { Stories = stories };
         }
     }
 }
