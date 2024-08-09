@@ -1,0 +1,12 @@
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\bin\Debug\net6.0\hacker.news.api.repositories.deps.json
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\bin\Debug\net6.0\hacker.news.api.repositories.dll
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\bin\Debug\net6.0\hacker.news.api.repositories.pdb
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.csproj.AssemblyReference.cache
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.AssemblyInfoInputs.cache
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.AssemblyInfo.cs
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.csproj.CoreCompileInputs.cache
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.dll
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\refint\hacker.news.api.repositories.dll
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\hacker.news.api.repositories.pdb
+D:\GitProjects\HackerNewsApi\hacker.news.api.repositories\obj\Debug\net6.0\ref\hacker.news.api.repositories.dll
