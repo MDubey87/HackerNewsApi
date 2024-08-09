@@ -25,7 +25,7 @@ namespace top.news.stories.repositories.HackerNewsRepository
         }
 
         /// <inheritdoc/>
-        public async Task<List<int>> GetTopHackerNews()
+        public async Task<IEnumerable<int>> GetTopHackerNewsIds()
         {
             var httpClient = GetHttpClient();
             var response= await httpClient.GetAsync("newstories.json");

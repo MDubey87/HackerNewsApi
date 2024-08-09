@@ -14,9 +14,9 @@ namespace top.news.stories.repositories.HackerNewsRepository
         /// <returns>Return HackerNewsResponse</returns>
         public Task<HackerNewsResponse> GetHackerNewsById(int storyId);
         /// <summary>
-        /// Retrieves top news
+        /// Retrieves top news ids
         /// </summary>
         /// <returns>Return List of top news ids</returns>
-        public Task<List<int>> GetTopHackerNews();
+        public Task<IEnumerable<int>> GetTopHackerNewsIds();
     }
 }

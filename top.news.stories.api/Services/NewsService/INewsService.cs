@@ -8,9 +8,9 @@ namespace top.news.stories.api.Services.NewsService
     public interface INewsService
     {
         /// <summary>
-        /// Retrieves Top News
+        /// Retrieves List of Top News
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Return collection of top news</returns>
         public Task<IEnumerable<News>> GetTopNews();
     }
 }

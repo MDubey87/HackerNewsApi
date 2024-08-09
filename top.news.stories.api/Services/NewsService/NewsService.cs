@@ -4,22 +4,32 @@ using top.news.stories.repositories.HackerNewsRepository.Models;
 
 namespace top.news.stories.api.Services.NewsService
 {
+    /// <summary>
+    /// Servcie class to implement INewsServcie
+    /// </summary>
     public class NewsService : INewsService
     {
         private readonly IHackerNewsRepository _hackerNewsRespository;
+        /// <summary>
+        /// NewsService Constructor
+        /// </summary>
+        /// <param name="hackerNewsRepository"></param>
         public NewsService(IHackerNewsRepository hackerNewsRepository)
         {
             _hackerNewsRespository = hackerNewsRepository;
         }
+
+        /// <inheritdoc/>
         public async Task<IEnumerable<News>> GetTopNews()
         {
-            var stories = await _hackerNewsRespository.GetTopHackerNews();
-            var newsTaskList = new List<Task<HackerNewsResponse>>();
-            if(stories != null && stories.Count > 0)
+            var newsIds = await _hackerNewsRespository.GetTopHackerNewsIds();
+            if (newsIds == null || !newsIds.Any())
             {
-                newsTaskList.AddRange(stories.AsEnumerable().Select(newsId=>_hackerNewsRespository.GetHackerNewsById(newsId)));
+                return Enumerable.Empty<News>();
             }
-            var newsResponseList = await Task.WhenAll(newsTaskList);
+            var newsTaskList = new List<Task<HackerNewsResponse>>();
+            newsTaskList.AddRange(newsIds.AsEnumerable().Select(newsId => _hackerNewsRespository.GetHackerNewsById(newsId)));
+            var newsResponseList = await Task.WhenAll(newsTaskList);            
             return MapTopNewsResponse(newsResponseList);
         }
         private IEnumerable<News> MapTopNewsResponse(HackerNewsResponse[] response)

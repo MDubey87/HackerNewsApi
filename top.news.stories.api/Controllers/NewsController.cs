@@ -4,28 +4,44 @@ using top.news.stories.api.Services.NewsService;
 
 namespace top.news.stories.api.Controllers
 {
+    /// <summary>
+    /// News Controller 
+    /// </summary>
     [ApiController]
     [Route("api")]
     public class NewsController : ControllerBase
     {
-        private readonly INewsService _hackerNewsRepository;
+        private readonly INewsService _newsService;
 
-        public NewsController(INewsService hackerNewsRepository)
+        /// <summary>
+        /// COntroller Constructor
+        /// </summary>
+        /// <param name="newsService"></param>
+        public NewsController(INewsService newsService)
         {
-            _hackerNewsRepository = hackerNewsRepository;
+            _newsService = newsService;
         }
 
+
+        /// <summary>
+        /// Get the list of top news
+        /// </summary>
+        /// <returns>Returns list of top news</returns>
         [HttpGet]
-        [Route("top-news")]
-        [ResponseCache(Duration =600)]
+        [Route("top-news-list")]
+        [ResponseCache(Duration = 600)]
         [ProducesResponseType(typeof(IEnumerable<News>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Error), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(Error), StatusCodes.Status401Unauthorized)]
-        [ProducesResponseType(typeof(Error), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Error), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> GetTopNews()
         {
-            var result=await _hackerNewsRepository.GetTopNews();
+            var result = await _newsService.GetTopNews();
+            if(!result.Any())
+            {
+                return NotFound();
+            }
             return Ok(result);
         }
     }
