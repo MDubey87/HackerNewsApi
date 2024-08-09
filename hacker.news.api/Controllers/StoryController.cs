@@ -29,7 +29,6 @@ namespace hacker.news.api.Controllers
         /// <returns>Returns list of top new stories</returns>
         [HttpGet]
         [Route("top-new-stories")]
-        [ResponseCache(Duration = 600)]
         [ProducesResponseType(typeof(StoriesResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]

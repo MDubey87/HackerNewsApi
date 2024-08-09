@@ -3,6 +3,8 @@ using hacker.news.api.Services.NewsService;
 using hacker.news.api.repositories.HackerNewsRepository;
 using hacker.news.api.repositories.HackerNewsRepository.Models;
 using Xunit;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace hacker.news.api.test.Services
 {
@@ -13,7 +15,13 @@ namespace hacker.news.api.test.Services
         public StoryServiceTest()
         {
             _hackerNewsRepository = new Mock<IHackerNewsRepository>();
-            _newsService = new StoryService(_hackerNewsRepository.Object);
+            
+            var services = new ServiceCollection();
+            services.AddMemoryCache();
+            var serviceProvider = services.BuildServiceProvider();
+            var _memoryCache = serviceProvider.GetService<IMemoryCache>();
+
+            _newsService = new StoryService(_hackerNewsRepository.Object, _memoryCache);
         }
         [Fact]
         public async Task GetTopNewsShouldRetrunListofNewsWhenSuccess()
@@ -27,7 +35,7 @@ namespace hacker.news.api.test.Services
                 Url = "http://test.com"
             };
             _hackerNewsRepository.Setup(x => x.GetHackerNewsById(It.IsAny<int>())).Returns(Task.FromResult(mockResponse));
-            var response= await _newsService.GetTopNewStories();
+            var response = await _newsService.GetTopNewStories();
             Assert.NotNull(response);
             Assert.True(response.Stories.Any());
         }
@@ -36,7 +44,7 @@ namespace hacker.news.api.test.Services
         public async Task GetTopNewsShouldRetrunEmptyListWhenGetTopHackerNewsIdsReturnEmpty()
         {
             _hackerNewsRepository.Setup(x => x.GetTopHackerNewsIds()).Returns(Task.FromResult(Enumerable.Empty<int>()));
-            
+
             var response = await _newsService.GetTopNewStories();
             Assert.NotNull(response);
             Assert.True(!response.Stories.Any());

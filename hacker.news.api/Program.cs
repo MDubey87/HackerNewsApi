@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
           .AllowAnyMethod();
     });
 });
-builder.Services.AddResponseCaching();
+builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IHackerNewsRepository, HackerNewsRepository>();
 builder.Services.AddScoped<IStoryService, StoryService>();
 var app = builder.Build();
@@ -33,7 +33,6 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 app.UseAuthorization();
-app.UseResponseCaching();
 app.MapControllers();
 
 app.Run();
