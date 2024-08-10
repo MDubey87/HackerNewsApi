@@ -22,10 +22,10 @@ jobs:
           dotnet-version: "6.0.x"
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build ${{vars.SOLUTION_FILE_NAME}} --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/hacker.news.api/hacker.news.api.sln
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
