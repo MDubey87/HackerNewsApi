@@ -7,4 +7,5 @@ hacker.news.api.test/obj/*
 hacker.news.api.repositories/.vs/*
 hacker.news.api.repositories/bin/*
 hacker.news.api.repositories/obj/*
+publish/*
 
