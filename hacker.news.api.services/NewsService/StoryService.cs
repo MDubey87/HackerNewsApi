@@ -44,7 +44,7 @@ namespace hacker.news.api.services.NewsService
                 return new StoriesResponse { Stories = Enumerable.Empty<Story>() };
             }
             var newsTaskList = new List<Task<HackerNewsResponse>>();
-            newsTaskList.AddRange(newsIds.AsEnumerable().Select(newsId => _hackerNewsRespository.GetHackerNewsById(newsId)));
+            newsTaskList.AddRange(newsIds.Take(200).AsEnumerable().Select(newsId => _hackerNewsRespository.GetHackerNewsById(newsId)));
             var newsResponseList = await Task.WhenAll(newsTaskList);
             return MapTopNewsResponse(newsResponseList);
         }
