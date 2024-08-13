@@ -3,10 +3,13 @@ using hacker.news.api.repositories.HackerNewsRepository.Models;
 
 namespace hacker.news.api.repositories.HackerNewsRepository
 {
+    /// <summary>
+    /// Hacker News Repository
+    /// </summary>
     public class HackerNewsRepository : IHackerNewsRepository
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly string httpBaseUrl="https://hacker-news.firebaseio.com/v0/";
+        private readonly string httpBaseUrl = "https://hacker-news.firebaseio.com/v0/";
         /// <summary>
         /// HackerNewsRepository Constructor
         /// </summary>
@@ -28,10 +31,14 @@ namespace hacker.news.api.repositories.HackerNewsRepository
         public async Task<IEnumerable<int>> GetTopHackerNewsIds()
         {
             var httpClient = GetHttpClient();
-            var response= await httpClient.GetAsync("newstories.json");
+            var response = await httpClient.GetAsync("newstories.json");
             response.EnsureSuccessStatusCode();
             return await response.HttpResponseHandler<List<int>>();
         }
+        /// <summary>
+        /// Method to create the HTTP client
+        /// </summary>
+        /// <returns>HttpClient object</returns>
         private HttpClient GetHttpClient()
         {
             HttpClient httpClient = _httpClientFactory.CreateClient();

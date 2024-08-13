@@ -1,5 +1,5 @@
 using hacker.news.api.Middlewares;
-using hacker.news.api.Services.NewsService;
+using hacker.news.api.services.NewsService;
 using hacker.news.api.repositories.HackerNewsRepository;
 
 var builder = WebApplication.CreateBuilder(args);

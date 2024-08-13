@@ -1,4 +1,4 @@
-﻿namespace hacker.news.api.Models.Responses
+﻿namespace hacker.news.api.services.Models.Responses
 {
     /// <summary>
     /// Response Object

@@ -1,5 +1,5 @@
 ﻿using Moq;
-using hacker.news.api.Services.NewsService;
+using hacker.news.api.services.NewsService;
 using hacker.news.api.repositories.HackerNewsRepository;
 using hacker.news.api.repositories.HackerNewsRepository.Models;
 using Xunit;

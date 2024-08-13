@@ -1,6 +1,6 @@
-﻿using hacker.news.api.Models.Responses;
+﻿using hacker.news.api.services.Models.Responses;
 
-namespace hacker.news.api.Services.NewsService
+namespace hacker.news.api.services.NewsService
 {
     /// <summary>
     /// HackerNews Service Interface

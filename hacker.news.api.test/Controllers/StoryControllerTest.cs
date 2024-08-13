@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
 using hacker.news.api.Controllers;
-using hacker.news.api.Models.Responses;
-using hacker.news.api.Services.NewsService;
+using hacker.news.api.services.Models.Responses;
+using hacker.news.api.services.NewsService;
 using Xunit;
 
 namespace hacker.news.api.test.Controllers

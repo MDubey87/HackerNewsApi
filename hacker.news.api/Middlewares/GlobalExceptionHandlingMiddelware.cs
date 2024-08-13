@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 using System.Net;
-using hacker.news.api.Models.Responses;
 
 namespace hacker.news.api.Middlewares
 {

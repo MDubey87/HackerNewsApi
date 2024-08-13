@@ -1,9 +1,9 @@
-﻿using hacker.news.api.Models.Responses;
-using hacker.news.api.repositories.HackerNewsRepository;
+﻿using hacker.news.api.repositories.HackerNewsRepository;
 using hacker.news.api.repositories.HackerNewsRepository.Models;
+using hacker.news.api.services.Models.Responses;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace hacker.news.api.Services.NewsService
+namespace hacker.news.api.services.NewsService
 {
     /// <summary>
     /// Servcie class to implement INewsServcie
@@ -80,5 +80,6 @@ namespace hacker.news.api.Services.NewsService
             }
             return null;
         }
+        
     }
 }

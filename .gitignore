@@ -8,4 +8,8 @@ hacker.news.api.repositories/.vs/*
 hacker.news.api.repositories/bin/*
 hacker.news.api.repositories/obj/*
 publish/*
+.vs/*
+hacker.news.api.services/.vs/*
+hacker.news.api.services/bin/*
+hacker.news.api.services/obj/*
 

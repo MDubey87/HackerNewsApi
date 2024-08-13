@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using hacker.news.api.Models.Responses;
-using hacker.news.api.Services.NewsService;
+using hacker.news.api.services.Models.Responses;
+using hacker.news.api.services.NewsService;
 
 namespace hacker.news.api.Controllers
 {
